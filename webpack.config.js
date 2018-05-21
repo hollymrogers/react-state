@@ -48,6 +48,16 @@ module.exports = function (env) {
     },
     module: {
       rules: [
+      {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {}  
+              }
+            ]
+          },
+
         {
           enforce: 'pre',
           test: /\.js$/,

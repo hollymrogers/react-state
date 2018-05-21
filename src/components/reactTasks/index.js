@@ -1,14 +1,33 @@
 import React from 'react'
-import Hello from './hello'
+import video from './images/trailer.png'
+import logo from './images/youtube.png'
+import Title from './title'
+import Uploader from './uploader'
+import Description from './description'
+import Subscribe from './confirm'
 
 export default () => {
   return (
+<div>
+
     <div>
-      <p>Question 1 Answer</p>
-      <Hello />
-
-      <p>Question 2 Answer</p>
-
+    	<img src={logo} alt="YouTube Logo" />
     </div>
-  )
+
+    <div>
+      <img src={video} alt="YouTube Video" />
+    </div>
+
+    <div>
+   	<Title /> 
+   	<Subscribe />
+	</div>
+
+    <div>
+    <Uploader />
+    <Description />
+    </div>
+  
+  </div>
+      )
 }
