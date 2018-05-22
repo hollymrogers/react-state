@@ -4,7 +4,8 @@ import logo from './images/youtube.png'
 import Title from './title'
 import Uploader from './uploader'
 import Description from './description'
-import Subscribe from './confirm'
+import Subscribe from './subscribe'
+
 
 export default () => {
   return (
