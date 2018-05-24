@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default class Subscribe extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {subscribed: true}
     this.handleClick = this.handleClick.bind(this)
   }
