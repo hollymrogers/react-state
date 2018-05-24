@@ -1,16 +1,16 @@
 import React from 'react'
 
 export default class Dislike extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {disliked: true}
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
-    this.setState(prevState => ({
+    this.state ({
       disliked: !prevState.disliked
-    }));
+    })
   }
 
   render() {
