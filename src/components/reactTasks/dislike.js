@@ -8,7 +8,7 @@ export default class Dislike extends React.Component {
   }
 
   handleClick() {
-    this.state ({
+   this.state.disliked ({
       disliked: !prevState.disliked
     })
   }
@@ -18,6 +18,6 @@ export default class Dislike extends React.Component {
       <button onClick={this.handleClick}>
         {this.state.disliked ? 'Dislike' : 'Disliked'}
       </button>
-    )
+    ) 
   }
 }
