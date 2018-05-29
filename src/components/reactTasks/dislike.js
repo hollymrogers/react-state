@@ -8,7 +8,7 @@ export default class Dislike extends React.Component {
   }
 
  handleClick() {
-     {this.state.disliked ? 'Dislike' : 'Disliked'}
+     this.setState.disliked ? this.setState({disliked:false}) : this.setState({disliked:true})
   }
 
 

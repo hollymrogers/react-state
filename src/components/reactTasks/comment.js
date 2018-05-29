@@ -13,8 +13,7 @@ export default class Comment extends React.Component{
 
   handleClick(){
     if(this.state.value.length > 0){
-    this.setState({comments: _.concat(this.state.comments, this.state.value)})
-    this.state.value = ''
+    this.setState({comments: _.concat(this.state.comments, this.state.value), value: ''})
     }
   }
 
@@ -23,7 +22,7 @@ export default class Comment extends React.Component{
     return (
       <form>
         {_.map(this.state.comments, comment => <li>{comment}</li>)}
-        <input type="text" value={this.state.comments} onChange={this.handleChange}/>
+        <input type="text" value={this.state.value} onChange={this.handleChange}/>
         <button onClick={this.handleClick.bind(this)}>Add Public Comment</button>
       </form>
     )

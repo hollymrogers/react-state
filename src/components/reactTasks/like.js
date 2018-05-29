@@ -8,7 +8,7 @@ export default class Like extends React.Component {
   }
 
   handleClick() {
-     {this.state.liked ? 'Like' : 'Liked'}
+     this.setState.liked ? this.setState({liked:false}) : this.setState({liked:true})
   }
 
   render() {
