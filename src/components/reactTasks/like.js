@@ -8,9 +8,7 @@ export default class Like extends React.Component {
   }
 
   handleClick() {
-    this.setState(prevState => ({
-      liked: !prevState.liked
-    }))
+     {this.state.liked ? 'Like' : 'Liked'}
   }
 
   render() {
