@@ -4,14 +4,16 @@ export default class Comment extends React.Component{
 
   constructor(){
     super()
-    this.state = {comments: ['Brilliant!', 'Terrible'], value: ' '}
+    this.state = {comments: ['Brilliant!', 'Terrible'], value: ''}
   }
 
-  handleChange(event) {
-    this.setState({value: event.state.comments});
+  handleChange(value) {
+    console.log(value)
+    this.setState({value: value});
   }
 
-  handleClick(){
+  handleClick(event){
+    event.preventDefault()
     if(this.state.value.length > 0){
     this.setState({comments: _.concat(this.state.comments, this.state.value), value: ''})
     }
@@ -21,9 +23,9 @@ export default class Comment extends React.Component{
     
     return (
       <form>
-        {_.map(this.state.comments, comment => <li>{comment}</li>)}
-        <input type="text" value={this.state.value} onChange={this.handleChange}/>
-        <button onClick={this.handleClick.bind(this)}>Add Public Comment</button>
+       <ul> {_.map(this.state.comments, comment => <li>{comment}</li>)}</ul>
+        <input type="text" value={this.state.value} onChange={event=>this.handleChange(event.target.value)}/>
+        <button onClick={event=>this.handleClick(event)}>Add Public Comment</button>
       </form>
     )
   }
