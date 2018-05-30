@@ -7,9 +7,13 @@ export default class Like extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
-     this.setState.liked ? this.setState({liked:false}) : this.setState({liked:true})
-  }
+    handleClick(event) {
+    if(this.state.liked == true){
+      this.setState({liked:false})
+    } else {
+      this.setState({liked:true})
+    }
+}
 
   render() {
     return (
@@ -19,3 +23,4 @@ export default class Like extends React.Component {
     )
   }
 }
+
