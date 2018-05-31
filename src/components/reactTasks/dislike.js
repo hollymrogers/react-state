@@ -7,14 +7,11 @@ export default class Disike extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-handleClick(event) {
-    if(this.state.disliked == true){
-      this.setState({disliked:false})
-    } else {
-      this.setState({disliked:true})
-    }
-}
-    
+handleClick() {
+    this.setState({
+      disliked: !this.state.disliked});
+  }
+
 
   render() {
     return (
